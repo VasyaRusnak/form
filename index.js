@@ -30,7 +30,7 @@ document.getElementById('signup-country').addEventListener('change', function ()
     city.disabled = !this.value;
 
     const cities = {
-        Ukraine: ['Kyiv', 'Lviv', 'Odessa'],
+        Ukraine: ['Kyiv', 'Lviv', 'Chernivtsi'],
         Poland: ['Warsaw', 'Krakow', 'Gdansk']
     };
 
@@ -80,6 +80,8 @@ signupForm.addEventListener('submit', function (e) {
         dob.classList.add('valid');
         dobError.textContent = '';
     }
+    const rememberMe = document.getElementById('remember-me').checked;
+    console.log("Remember Me:", rememberMe);  // true або false
 
     const pwd = signupForm['signup-password'];
     const confirm = signupForm['signup-confirm'];

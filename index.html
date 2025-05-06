@@ -13,60 +13,66 @@
     <div class="tab" id="login-tab">Login</div>
   </div>
 
-  <form id="signup-form" class="form active">
-    <input type="text" id="signup-firstname" placeholder="First Name" required />
+  <!-- Signup Form -->
+  <form id="signup-form" class="form active" autocomplete="off" novalidate>
+    <input type="text" id="signup-firstname" placeholder="First Name" autocomplete="off" />
     <span class="error" id="firstname-error"></span>
 
-    <input type="text" id="signup-lastname" placeholder="Last Name" required />
+    <input type="text" id="signup-lastname" placeholder="Last Name" autocomplete="off" />
     <span class="error" id="lastname-error"></span>
 
-    <input type="email" id="signup-email" placeholder="Email" required />
+    <input type="email" id="signup-email" placeholder="Email" autocomplete="off" />
     <span class="error" id="email-error"></span>
 
-    <input type="tel" id="signup-phone" placeholder="Phone +380..." required pattern="\+380\d{9}" />
+    <input type="tel" id="signup-phone" placeholder="Phone +380..." pattern="\+380\d{9}" autocomplete="off" />
     <span class="error" id="phone-error"></span>
 
-    <input type="date" id="signup-dob" required />
+    <input type="date" id="signup-dob" autocomplete="off" />
     <span class="error" id="dob-error"></span>
 
-    <select id="signup-sex" required>
+    <select id="signup-sex" autocomplete="off">
       <option value="">Select sex</option>
-      <option value="male">Male</option>
-      <option value="female">Female</option>
+      <option value="male">Boy</option>
+      <option value="female">Girl</option>
     </select>
     <span class="error" id="sex-error"></span>
 
-    <select id="signup-country" required>
+    <select id="signup-country" autocomplete="off">
       <option value="">Select country</option>
       <option value="Ukraine">Ukraine</option>
       <option value="Poland">Poland</option>
     </select>
 
-    <select id="signup-city" disabled required>
+    <select id="signup-city" disabled autocomplete="off">
       <option value="">Select city</option>
     </select>
     <span class="error" id="location-error"></span>
 
     <div class="password-wrapper">
-      <input type="password" id="signup-password" placeholder="Password" required />
+      <input type="password" id="signup-password" placeholder="Password" autocomplete="new-password" />
       <span class="toggle-password" onclick="togglePassword('signup-password')">👁️</span>
     </div>
     <span class="error" id="password-error"></span>
 
     <div class="password-wrapper">
-      <input type="password" id="signup-confirm" placeholder="Confirm password" required />
+      <input type="password" id="signup-confirm" placeholder="Confirm password" autocomplete="new-password" />
       <span class="toggle-password" onclick="togglePassword('signup-confirm')">👁️</span>
     </div>
     <span class="error" id="confirm-error"></span>
 
     <button type="submit">Signup</button>
+    <div class="remember-wrapper">
+      <input type="checkbox" id="remember-me" />
+      <label for="remember-me">Remember Me</label>
+    </div>
+
   </form>
 
   <!-- Login Form -->
-  <form id="login-form" class="form">
-    <input type="text" id="login-username" placeholder="Username or Email" required />
+  <form id="login-form" class="form" autocomplete="off" novalidate>
+    <input type="text" id="login-username" placeholder="Username or Email" autocomplete="off" />
     <div class="password-wrapper">
-      <input type="password" id="login-password" placeholder="Password" required />
+      <input type="password" id="login-password" placeholder="Password" autocomplete="new-password" />
       <span class="toggle-password" onclick="togglePassword('login-password')">👁️</span>
     </div>
     <button type="submit">Login</button>
